@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>$dell-brand-blue: #007DB8;&#13;
+$dell-brand-aqua: #3DC6EF;&#13;
+&#13;
+&#13;
+$navbar-inverse-link-color: #000 !default;&#13;
+$navbar-inverse-link-hover-color: $dell-brand-aqua !default;&#13;
+&#13;
+$navbar-inverse-bg: #fff;&#13;
+&#13;
+</css_variables>
+        <footer/>
+        <footer_fixed>true</footer_fixed>
+        <header display_value="Dell Header">a4649abcdb3023004e9a9235ca961983</header>
+        <name>Dell Theme</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-24 20:08:08</sys_created_on>
+        <sys_id>d794deb8db7023004e9a9235ca961989</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Dell Theme</sys_name>
+        <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
+        <sys_update_name>sp_theme_d794deb8db7023004e9a9235ca961989</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 02:56:12</sys_updated_on>
+    </sp_theme>
+</record_update>

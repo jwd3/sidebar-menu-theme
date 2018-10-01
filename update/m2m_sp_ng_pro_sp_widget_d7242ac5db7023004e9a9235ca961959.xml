@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="m2m_sp_ng_pro_sp_widget">
+    <m2m_sp_ng_pro_sp_widget action="INSERT_OR_UPDATE">
+        <sp_angular_provider display_value="dellSpDropdownTree">e8142209db7023004e9a9235ca9619ef</sp_angular_provider>
+        <sp_widget display_value="Dell Header Menu">7e5e9e81db7023004e9a9235ca9619da</sp_widget>
+        <sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-25 15:54:28</sys_created_on>
+        <sys_id>d7242ac5db7023004e9a9235ca961959</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dellSpDropdownTree.Dell Header Menu</sys_name>
+        <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
+        <sys_update_name>m2m_sp_ng_pro_sp_widget_d7242ac5db7023004e9a9235ca961959</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-25 15:54:28</sys_updated_on>
+    </m2m_sp_ng_pro_sp_widget>
+</record_update>

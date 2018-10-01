@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-09-25 18:58:21</sys_created_on>
+        <sys_id>c54e4fc1dbf023004e9a9235ca961901</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>7fcaa702933002009c8579b4f47ffbde</sys_name>
+        <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
+        <sys_update_name>sys_embedded_help_role_c54e4fc1dbf023004e9a9235ca961901</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-09-25 18:58:21</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

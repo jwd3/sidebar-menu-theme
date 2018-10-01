@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_css_include">
+    <sp_css_include action="INSERT_OR_UPDATE">
+        <name>dell-main.css</name>
+        <source>local</source>
+        <sp_css display_value="dell-main.css">21efb9c1db3023004e9a9235ca96196e</sp_css>
+        <sys_class_name>sp_css_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-25 13:16:40</sys_created_on>
+        <sys_id>c81046c1db3023004e9a9235ca96191c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dell-main.css</sys_name>
+        <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
+        <sys_update_name>sp_css_include_c81046c1db3023004e9a9235ca96191c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-25 13:16:40</sys_updated_on>
+        <url/>
+    </sp_css_include>
+</record_update>

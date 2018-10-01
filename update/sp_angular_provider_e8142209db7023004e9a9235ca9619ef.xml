@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_angular_provider">
+    <sp_angular_provider action="INSERT_OR_UPDATE">
+        <name>dellSpDropdownTree</name>
+        <script><![CDATA[function () {
+	return {
+		restrict: 'E',
+		scope: {items: '='},
+		replace: true,
+		template: '<ul class="dropdown-menu">' +
+		'<li ng-repeat="mi in items" style="min-width: 20em;" ng-class="{\'dropdown-submenu\': mi.type == \'menu\', \'dropdown-menu-line\':$index < items.length - 1}" ng-include="getURL()">' +
+		'</ul>',
+		link : function(scope, element, attrs, controller) {
+			scope.getURL = function() {
+				return 'dellSpDropdownTreeTemplate';
+			}
+		}
+	}
+}]]></script>
+        <sys_class_name>sp_angular_provider</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-09-25 15:54:28</sys_created_on>
+        <sys_id>e8142209db7023004e9a9235ca9619ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dellSpDropdownTree</sys_name>
+        <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
+        <sys_update_name>sp_angular_provider_e8142209db7023004e9a9235ca9619ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-09-25 15:54:28</sys_updated_on>
+        <type>directive</type>
+    </sp_angular_provider>
+</record_update>
