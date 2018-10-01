@@ -1,96 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_theme">
     <sp_theme action="INSERT_OR_UPDATE">
-        <css_variables>// TOP NAV&#13;
-$logo-height:20px;&#13;
+        <css_variables>$dell-brand-blue: #007DB8;&#13;
+$dell-brand-aqua: #3DC6EF;&#13;
 &#13;
-// LEFT NAV&#13;
-$left-menu-width:250px;&#13;
-$left-menu-bg-color:#FFF;&#13;
-$left-menu-border-color:#D3D3D3;&#13;
-$left-menu-border: 1px solid $left-menu-border-color;&#13;
-$left-menu-collapse-bar-color: #F5F5F5;&#13;
-$left-menu-collapse-bar-text-color: #000;&#13;
-&#13;
-// &#13;
-// SASS Variables used in the Service Portal stylesheets&#13;
-// Lines starting with // are comments&#13;
-// Colors must use HEX color format (#000000)&#13;
-//&#13;
-&#13;
-$sp-logo-margin-x: 		15px !default;&#13;
-$sp-logo-background-color: #FFF;&#13;
 &#13;
 //### Colors ###&#13;
-$primary:			#cf1d25;&#13;
-$success:			#5cb85c;&#13;
+$primary:			$dell-brand-blue;&#13;
+$success:			$dell-brand-aqua;&#13;
+/*&#13;
 $warning:			#f0ad4e;&#13;
 $danger:			#cf1d25;&#13;
 $info:				#428bca;;&#13;
+*/&#13;
 $gray-light:		#edf1f2;&#13;
 $gray-dark:			#3a3f51;&#13;
 &#13;
-$state-info-text:	$info;&#13;
-$state-success-text: $success;&#13;
 &#13;
-//### Typography ###&#13;
-$text-color:		#717171;&#13;
-$sp-tagline-color:	black !default;&#13;
-$text-muted:		#bdc0c4;&#13;
-$link-color:		$info;&#13;
-&#13;
-//### Navbar ###&#13;
-$navbar-default-bg: 	#f8f8f8;&#13;
 &#13;
 //### Inverted Navbar ###&#13;
 $navbar-inverse-bg:	#ffffff;&#13;
-$navbar-inverse-link-color: #4398d1;&#13;
-$navbar-inverse-link-hover-color: mix(#FFF, $navbar-inverse-bg,75%);&#13;
+$navbar-inverse-link-color: $primary !default;&#13;
+//$navbar-inverse-link-hover-color: mix($primary, $navbar-inverse-bg, 75%);&#13;
+$navbar-inverse-link-hover-color: $success;&#13;
 &#13;
-//### Components ###&#13;
-$body-bg:			#eff3f6;&#13;
+$navbar-inverse-bg: #fff;&#13;
 &#13;
-//### Unos Theme Colors&#13;
-$unos-blue:#4296d4;&#13;
-$unos-jade:#48a1a5;&#13;
-$unos-orange:#e69635;&#13;
-$unos-green:#92c54e;&#13;
-$unos-grape:#6c2b87;&#13;
-&#13;
-//### Announcement ###&#13;
-$announcement-gradient-start: #e89535;&#13;
-$announcement-gradient-mid: #e89535;&#13;
-$announcement-gradient-end: #f2c643;&#13;
-&#13;
-.sp-announcement {&#13;
-  background-image: linear-gradient(&#13;
-    to right, &#13;
-    $announcement-gradient-start,&#13;
-    $announcement-gradient-mid 25%,&#13;
-    $announcement-gradient-end 100%&#13;
-  ); &#13;
-}&#13;
+// Left Nav&#13;
+$left-menu-width: 250px;&#13;
 &#13;
 &#13;
 @media (min-width: 992px) {&#13;
-	&#13;
+&#13;
+/*&#13;
   .container {&#13;
 	  padding-top: 20px !important;&#13;
 	  padding-right: 40px !important;&#13;
 	  padding-left: 310px !important;&#13;
 	  bottom: 0px;&#13;
   }&#13;
-	&#13;
-  main.leftNavCollapsed .container {&#13;
-	  padding-left: 112px !important;&#13;
+*/&#13;
+  &#13;
+  main &gt; div &gt; div.container {&#13;
+  	padding-left: $left-menu-width;&#13;
   }&#13;
 }&#13;
 &#13;
+/*&#13;
 @media (max-width: 991px) {&#13;
   .container {&#13;
 	  padding-top: 20px !important;&#13;
   }&#13;
-}</css_variables>
+}&#13;
+*/</css_variables>
         <footer/>
         <footer_fixed>false</footer_fixed>
         <header display_value="Dell HI Header">3fa52561dbfc23004e9a9235ca961928</header>
@@ -100,13 +62,13 @@ $announcement-gradient-end: #f2c643;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-27 00:36:47</sys_created_on>
         <sys_id>9455ededdbbc23004e9a9235ca961926</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Dell HI Theme</sys_name>
         <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
         <sys_policy/>
         <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
         <sys_update_name>sp_theme_9455ededdbbc23004e9a9235ca961926</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-09-27 04:22:08</sys_updated_on>
+        <sys_updated_on>2018-10-01 04:39:19</sys_updated_on>
     </sp_theme>
 </record_update>

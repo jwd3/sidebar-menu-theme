@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_ng_template">
+    <sp_ng_template action="INSERT_OR_UPDATE">
+        <id>dellMenuTemplate</id>
+        <sp_widget display_value="Dell Header Menu">7e5e9e81db7023004e9a9235ca9619da</sp_widget>
+        <sys_class_name>sp_ng_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-01 17:23:51</sys_created_on>
+        <sys_id>0b22f583dbfc63004e9a9235ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dellMenuTemplate</sys_name>
+        <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
+        <sys_update_name>sp_ng_template_0b22f583dbfc63004e9a9235ca9619a6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-01 17:23:51</sys_updated_on>
+        <template><![CDATA[<a ng-if="item.items.length == 0 && !item.scriptedItems" ng-href="{{item.href}}" target="{{item.url_target}}" title="{{item.hint}}">
+  <fa ng-if="item.glyph" name="{{::item.glyph}}"></fa>
+  <span ng-bind-html="item.label"></span>
+</a>
+<a role="button" ng-if="item.items.length > 0" href="javascript:void(0)" class="dropdown-toggle sp-menu-has-items" data-toggle="dropdown" aria-controls="menu-apply" aria-haspopup="true" title="{{item.hint}}">
+  <fa ng-if="item.glyph" name="{{::item.glyph}}"></fa>
+  <span ng-bind-html="item.label"></span> <span class="caret"></span>
+</a>
+<ul ng-if="item.items.length > 0" class="dropdown-menu" role="group" id="menu-apply">
+  <li ng-repeat="item in item.items" ng-include="'dellMenuTemplate'" />
+</ul>
+<a role="button" ng-if="item.scriptedItems.count > 0" href="javascript:void(0)" data-toggle="dropdown" title="{{item.hint}}">
+  <fa ng-if="item.glyph" name="{{::item.glyph}}"></fa>
+  <span ng-bind-html="item.label"></span>
+  <span ng-if="!item.scriptedItems.omitBadge" class="label label-as-badge label-primary sp-navbar-badge-count">{{item.scriptedItems.count}}</span>
+</a>
+<sp-dropdown-tree role="menu" aria-label="{{::item.label}}" ng-if="item.scriptedItems.count > 0" items="item.scriptedItems.items" />]]></template>
+    </sp_ng_template>
+</record_update>

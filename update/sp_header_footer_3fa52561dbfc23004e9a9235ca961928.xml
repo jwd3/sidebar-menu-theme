@@ -8,8 +8,7 @@
 		$scope.isViewNative = true;
 
 	
-	$scope.showTypeaheadSearch = false;
-	
+	$scope.showTypeaheadSearch = true;
 	
 	$scope.openChatPopUp = function(evt) {
 		$(evt.target).blur();
@@ -50,10 +49,24 @@
 clean up old styles 
 */
 
-$baseColor: #444;
+
 //$navbar-inverse-bg: purple;
 $logo-height: 25px;
 $navbar-height: $logo-height * 3;
+
+// Left Nav
+$left-menu-bg-color: #444;
+$left-menu-hover-color: #000;
+$left-menu-border-color: #D3D3D3;
+$left-menu-border: 1px solid $left-menu-border-color;
+$left-menu-text-color: #FFF;
+$left-menu-grey: #AAAAAA;
+$left-menu-base-padding: 20px;
+
+.navbarDiv {
+  background-color: $navbar-inverse-bg;
+  border-bottom: $left-menu-border;
+}
 
 
 .navbar-nav &gt; li &gt; a {
@@ -69,10 +82,12 @@ $navbar-height: $logo-height * 3;
   z-index: 999;
   background-color: $navbar-inverse-bg;
 
-  .leftNavCollapsed {
-    margin-left: $left-menu-width;
+  
+  .menuToggleButton {
+    background-color: $primary;
+    border-color: $success;
+    color: $navbar-inverse-bg;
   }
-
 
   @media (min-width: 992px) {
 
@@ -86,7 +101,7 @@ $navbar-height: $logo-height * 3;
 
       .navbar-header {
         display: inline-flex;
-        align-items: center;
+        align-items: stretch;
       }
     }
 
@@ -100,33 +115,72 @@ $navbar-height: $logo-height * 3;
 
       ul.navbar-nav {
         display: inline-flex;
-        align-items: center;
+        align-items: stretch;
         flex: 1;
+        
+        li {
+          display: flex;
+          border-bottom: 3px solid transparent;
+          
+          &amp;:hover {
+            border-bottom: 3px solid $navbar-inverse-link-hover-color;
+          }
+          
+          a {
+           	display: flex;
+            align-items: center;
+          }
+        }
+      }
+      
+      #utilityMenu {
+
+        display: flex;
+
+        &gt; ul {
+          
+          li {
+            
+            &amp;.navbar-action-icon {
+              align-items: center;
+            }
+            
+            &amp;:hover {
+              border-bottom: 3px solid transparent;
+            }
+          }
+          
+          @media (max-width: 991px) {
+            #userOptionsDropdown {
+              display: none;
+            }
+          }
+
+          @media (min-width: 992px) {
+            .mobile-option {
+              display: none;
+
+              &gt; a {
+                padding-top: unset;
+              }
+            }  
+          }
+        }
       }
     }
   }
-}
-
-#utilityMenu {
-
-  display: flex;
-  //background-color: red;
-
-  &gt; ul {
-    @media (max-width: 991px) {
+  
+  
+  @media (max-width: 991px) {
+   
+    #utilityMenu {
+      &gt; ul &gt; li.navbar-action-icon {
+      	display: none;
+      }
+      
       #userOptionsDropdown {
         display: none;
       }
-    }
-
-    @media (min-width: 992px) {
-      .mobile-option {
-        display: none;
-
-        &gt; a {
-          padding-top: unset;
-        }
-      }  
     }
   }
 }
@@ -157,29 +211,48 @@ $navbar-height: $logo-height * 3;
     bottom: 0px;
     z-index: 1000;
     width: 270px;
+    color: $left-menu-text-color;
   }
-
+  
   .userInfoContainer {
 
+    @media (max-width: 991px) {
+      display: none;
+    }
+    
     $uicHeight : 200px;
     min-height: $uicHeight;
-    line-height: $uicHeight;
     text-align: center;
-    background-color: $baseColor;
-    color: $fff;
+    background-color: $left-menu-bg-color;
 
     &gt; div {
       vertical-align:middle;
       line-height: normal;
     }
+    
+    span {
+      display:block;
+      padding-top: 20px;
+    }
+    
+    .userName {
+      display: block;
+      padding: 35px 10px 0;
+      font-size: 1.3em;
+      text-transform: uppercase;
+    }
+    
+    .userCompany {
+      color: $left-menu-grey;
+    }
   }
 
   #menuItems {
-    background-color: $baseColor;
 
-    @media (min-width: 991px) {
+    @media (min-width: 992px) {
 
-      height: calc(100vh - 264px); /* $uicHeight &amp; header height */
+      background-color: $left-menu-bg-color;
+      height: calc(100vh - 275px); /* $uicHeight &amp; header height */
       overflow: hidden;
 
       &amp;:hover {
@@ -189,6 +262,47 @@ $navbar-height: $logo-height * 3;
 
     #sidebar {
       width: 100%;
+      
+      ul:last-of-type {
+        border-bottom: 1px solid $left-menu-grey;
+      }
+            
+      
+      @media (min-width: 992px) {
+        li {
+          
+          min-height: 50px;
+          display: flex;
+          
+          &amp;.parent-item, &amp;.single-item {
+            border-top: 1px solid $left-menu-grey;
+            text-transform: uppercase;
+          }
+          
+          &amp;.parent-item {
+            
+          }
+                    
+          &gt; a {
+            color: $left-menu-text-color;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 $left-menu-base-padding 0 $left-menu-base-padding;
+                        
+            &amp;.child-item {
+              padding-left: $left-menu-base-padding + 10px;
+              color: $left-menu-grey;
+            }
+            
+            &amp;:hover, &amp;:focus {
+              color: $left-menu-text-color;
+              background-color: $left-menu-hover-color;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -287,16 +401,11 @@ padding-bottom: 20px;
 
 
 
+/*
 #uiNotificationContainer {
   margin-top: 5% !important;
   z-index: 1200 !important;
 }
-
-.navbarDiv {
-  background-color: #FFF;
-  border-bottom: $left-menu-border;
-}
-
 
 
 .dropdown-menu &gt; li &gt; a,
@@ -317,6 +426,7 @@ padding-bottom: 20px;
     color: mix(#FFF,$navbar-inverse-bg,70);
   }
 }
+*/
 
 .timeline-body p {
   white-space: pre-wrap;
@@ -410,7 +520,6 @@ display: none !important;
 .filter-header button#problem-sort-filter-button {
 display: none !important;
 }
-*/
 
 .modal-content .load-filter-modal.modal-body .load-filter-list {
   margin: 10px 0 0 -20px;
@@ -466,6 +575,8 @@ display: none !important;
   right: -5px;
 }
 
+*/
+/*
 a {
   color: $navbar-inverse-link-color;
   text-decoration: none;
@@ -490,6 +601,7 @@ a.btn-primary {
   line-height: 17px;
 }
 
+*/
 /*
 body {
 background-color: #fafafa !important;
@@ -501,7 +613,6 @@ body #uiNotificationContainer {
 padding-left: $left-menu-width !important;
 margin-top: 5px !important;
 }
-*/
 
 .line {
   box-sizing: border-box;
@@ -532,6 +643,7 @@ margin-top: 5px !important;
   text-decoration: underline;
 }
 
+*/
 /*
 .panel {
 border-color: #E6E8EA !important;
@@ -824,6 +936,7 @@ body.touch_scroll {
     color: #333;
   }
 
+  /*
   .userMenuCaret {
     position: relative;
     top: -10px;
@@ -842,11 +955,12 @@ body.touch_scroll {
     display: inline-block;
     text-align: left;
   }
+  */
 }
 
 
-
 @media (max-width: 991px) {
+  /*
   .btn-mobile {
     color: #7EB5A2;
     border: solid 1px #7EB5A2;
@@ -859,6 +973,7 @@ body.touch_scroll {
     margin-bottom: 13px;
     border-radius: 4px;
   }
+  */
 
   .loadingIndicator {
     position: absolute;
@@ -933,6 +1048,7 @@ body.touch_scroll {
     color: #fff;
   }
 
+  /*
   .userMenuCaret {
     display: none;
   }
@@ -949,6 +1065,7 @@ body.touch_scroll {
     display: inline-block;
     text-align: left;
   }
+  */
 
   .dropdown-menu {
     display: block;
@@ -1003,7 +1120,7 @@ body.touch_scroll {
 
   .navbar-nav {
     float: none !important;
-    margin-top: 7.5px;
+    //margin-top: 7.5px;
   }
 
   .navbar-nav &gt; li {
@@ -1021,9 +1138,11 @@ body.touch_scroll {
   }
 }
 
+/*
 #loginLinkDesktop {
   color: #445864;
 }
+*/
 /*
 .navbar {
 transition: 250ms opacity ease-in-out;
@@ -1165,6 +1284,13 @@ margin: 0px;
 		if (target.parents("ul.dropdown-menu").length > 0)
 			$(this).removeClass('in').addClass('collapse');
 	});
+	
+	
+	$(element).on('click','.parent-item',function(e) {
+		var target = $(e.target);
+		var i = target.find('i.fa');
+		i.toggleClass('fa-caret-up fa-caret-down');
+	});
 }]]></link>
         <name>Dell HI Header</name>
         <option_schema/>
@@ -1178,6 +1304,7 @@ var menu = $sp.getValue("sp_rectangle_menu");
 data.headerMenu = $sp.getWidgetFromInstance(menu);
 if (data.headerMenu && data.headerMenu.data) {
 	data.headerMenu.data.replace = true;
+/*
 	// Hide login if menu already has link to login
 	data.hasLogin = false;
 	if (data.headerMenu.data.menu.items) {
@@ -1187,23 +1314,8 @@ if (data.headerMenu && data.headerMenu.data) {
 				data.hasLogin = true;
 		}
 	}
+	*/
 }
-
-//var menu = $sp.getValue("sp_rectangle_menu");
-data.utilityMenu = $sp.getWidgetFromInstance(menu);
-if (data.utilityMenu && data.utilityMenu.data) {
-	data.headerMenu.data.replace = true;
-	// Hide login if menu already has link to login
-	data.hasLogin = false;
-	if (data.headerMenu.data.menu.items) {
-		for(var i in data.headerMenu.data.menu.items) {
-			var item = data.headerMenu.data.menu.items[i];
-			if (item.type == 'page' && item.sp_page == data.login_page)
-				data.hasLogin = true;
-		}
-	}
-}
-
 
 
 // Load the Left Nav Items
@@ -1213,17 +1325,12 @@ var qsConfigJson = qsConfig ? JSON.parse(qsConfig)[0] : {};
 if (qsConfigJson.leftNav) {
 	
 	data.leftNav = {};
-	data.leftNav.items = $sp.getMenuItems(qsConfigJson.leftNav.sys_id);
-	
+	data.leftNav.items = $sp.getMenuItems(qsConfigJson.leftNav.sys_id);	
 }
-
-var tmpItems = $sp.getMenuItems(qsConfigJson.leftNav.sys_id);
-console.log('tmpItems : ' + JSON.stringify(tmpItems));
 
 
 
 data.loginWidget = $sp.getWidgetFromInstance('login-modal');
-
 
 data.optionsSearch = "{title: 'Search All Sources', limit: 10}";
 data.typeahead = $sp.getWidget('typeahead-search', data.optionsSearch);]]></script>
@@ -1232,14 +1339,14 @@ data.typeahead = $sp.getWidget('typeahead-search', data.optionsSearch);]]></scri
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-27 00:38:23</sys_created_on>
         <sys_id>3fa52561dbfc23004e9a9235ca961928</sys_id>
-        <sys_mod_count>110</sys_mod_count>
+        <sys_mod_count>212</sys_mod_count>
         <sys_name>Dell HI Header</sys_name>
         <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
         <sys_policy/>
         <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
         <sys_update_name>sp_header_footer_3fa52561dbfc23004e9a9235ca961928</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-01 03:47:28</sys_updated_on>
+        <sys_updated_on>2018-10-01 19:39:15</sys_updated_on>
         <template><![CDATA[<div class="navbarDiv">
   <nav class="navbar topNavbar" role="navigation">
     <div class="container-fluid">
@@ -1277,7 +1384,7 @@ data.typeahead = $sp.getWidget('typeahead-search', data.optionsSearch);]]></scri
                   <li><a href="{{::portal.logoutUrl}}">${Logout}</a></li>
                 </ul>
               </li>
-              <li class="mobile-option"><a ng-href="?id=user_profile&sys_id={{::user.sys_id}}">{{::user.name}}</a></li>
+              <li class="mobile-option"><a ng-href="?id=user_profile&sys_id={{::user.sys_id}}">${Profile}</a></li>
               <li class="mobile-option"><a href="{{::portal.logoutUrl}}">${Logout}</a></li>
             </ul>
           </ul>
@@ -1285,55 +1392,19 @@ data.typeahead = $sp.getWidget('typeahead-search', data.optionsSearch);]]></scri
         <div class="leftContainer">
           <div class="companyLogoContainer hidden-xs hidden-sm">
             <div class="visible-md-inline-block visible-lg-inline-block">
-              <a class="companyLogo" href="?id=csm_unos_index">
+              <a class="companyLogo" href="?id={{::portal.homepage_dv}}">
                 <img ng-src="{{::portal.logo}}" alt="DellEMC" role="presentation">
               </a>
             </div>
           </div>
-          <div class="userInfoContainer hidden-xs hidden-sm">
-            <div class="visible-md-inline-block visible-lg-inline-block">
-              <strong>Hello!</strong> Welcome back,
-              <div class='userName'>ALLEN ROSS</div>
-            </div>
+          <div class="userInfoContainer">
+            <span><strong>Hello!</strong> Welcome back,</span> <span class='userName'>{{::user.name}}</span> <span class='userCompany'>Carnival Cruises</span>
           </div>
 
           <div id="menuItems">
             <div id="sidebar" role="navigation">
-              <div class="sidebar-nav">
-                <ul class="nav">
-                  
-                  <li ng-repeat="item in data.leftNav.items" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}" ng-include="'dellMenuTemplate'"></li>
-
-									
-                  <li class="nav-divider"></li>
-                  <li class="active"><a href="#">Link1</a></li>
-                  <li><a href="#">Link2</a></li> 
-                  <li><a href="#">Link3</a></li>
-                  <li class="nav-divider"></li>
-                  <!--
-                  <li><a href="#">Link4</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="nav-divider"></li>
-                  <li><a href="#">Link7</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="nav-divider"></li>
-                  <li><a href="#">Link9</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="nav-divider"></li>
-                  <li><a href="#">Link12</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="nav-divider"></li>
-                  <li><a href="#">Link14</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="nav-divider"></li>
-                  <li><a href="#">Link17</a></li>
-                  <li><a href="#">Link</a></li>
-                  -->
-                </ul>
-              </div>
+              <ul class="nav" ng-repeat-start="item in data.leftNav.items" ng-include="'dellLeftNavMenuTemplate'"></ul>
+              <div ng-repeat-end></div>
             </div>
           </div>
         </div>
