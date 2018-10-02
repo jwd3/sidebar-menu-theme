@@ -44,357 +44,379 @@
 	});
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>$logo-height: 25px;&#13;
-$navbar-height: $logo-height * 3;&#13;
-&#13;
-// Left Nav&#13;
-$left-menu-bg-color: #444;&#13;
-$left-menu-hover-color: #000;&#13;
-$left-menu-border-color: #D3D3D3;&#13;
-$left-menu-border: 1px solid $left-menu-border-color;&#13;
-$left-menu-text-color: #FFF;&#13;
-$left-menu-grey: #AAAAAA;&#13;
-$left-menu-base-padding: 20px;&#13;
-&#13;
-.navbarDiv {&#13;
-  background-color: $navbar-inverse-bg;&#13;
-  border-bottom: $left-menu-border;&#13;
-}&#13;
-&#13;
-.navbar-nav &gt; li &gt; a {&#13;
-  padding-top: 0px;&#13;
-  padding-bottom: 0px;&#13;
-}&#13;
-&#13;
-.topNavbar {&#13;
-  padding: 0;&#13;
-  margin: 0 0 0 $left-menu-width;&#13;
-  border: none;&#13;
-  border-radius: 0;&#13;
-  z-index: 999;&#13;
-  background-color: $navbar-inverse-bg;&#13;
-&#13;
-  &#13;
-  .menuToggleButton {&#13;
-    background-color: $primary;&#13;
-    border-color: $success;&#13;
-    color: $navbar-inverse-bg;&#13;
-  }&#13;
-&#13;
-  @media (min-width: 992px) {&#13;
-&#13;
-    &gt; .container-fluid {&#13;
-&#13;
-      padding-right: 0px;&#13;
-      display: inline-flex;&#13;
-      width: 100%;&#13;
-      vertical-align: top;&#13;
-      height: $navbar-height;&#13;
-&#13;
-      .navbar-header {&#13;
-        display: inline-flex;&#13;
-        align-items: stretch;&#13;
-      }&#13;
-    }&#13;
-&#13;
-    &gt; .container-fluid div#headerMenu {&#13;
-&#13;
-      padding-right: 0px;&#13;
-      display: inline-flex !important;&#13;
-      justify-content: space-between;&#13;
-      flex-grow: 1;&#13;
-      background-color: $navbar-inverse-bg;&#13;
-&#13;
-      ul.navbar-nav {&#13;
-        display: inline-flex;&#13;
-        align-items: stretch;&#13;
-        flex: 1;&#13;
-        &#13;
-        li {&#13;
-          display: flex;&#13;
-          border-bottom: 3px solid transparent;&#13;
-          &#13;
-          &amp;:hover {&#13;
-            border-bottom: 3px solid $navbar-inverse-link-hover-color;&#13;
-          }&#13;
-          &#13;
-          a {&#13;
-           	display: flex;&#13;
-            align-items: center;&#13;
-          }&#13;
-        }&#13;
-      }&#13;
-      &#13;
-      #utilityMenu {&#13;
-&#13;
-        display: flex;&#13;
-&#13;
-        &gt; ul {&#13;
-          &#13;
-          li {&#13;
-            &#13;
-            &amp;.navbar-action-icon {&#13;
-              align-items: center;&#13;
-            }&#13;
-            &#13;
-            &amp;:hover {&#13;
-              border-bottom: 3px solid transparent;&#13;
-            }&#13;
-          }&#13;
-          &#13;
-          @media (max-width: 991px) {&#13;
-            #userOptionsDropdown {&#13;
-              display: none;&#13;
-            }&#13;
-          }&#13;
-&#13;
-          @media (min-width: 992px) {&#13;
-            .mobile-option {&#13;
-              display: none;&#13;
-&#13;
-              &gt; a {&#13;
-                padding-top: unset;&#13;
-              }&#13;
-            }  &#13;
-          }&#13;
-        }&#13;
-      }&#13;
-    }&#13;
-  }&#13;
-  &#13;
-  &#13;
-  @media (max-width: 991px) {&#13;
-&#13;
-    margin: 0;&#13;
-    min-height: 0;&#13;
-    &#13;
-    .collapse.in {&#13;
-      display: block !important;&#13;
-    }&#13;
-&#13;
-    &gt; .container-fluid {&#13;
-&#13;
-      .navbar-header {&#13;
-        padding-left: 15px;&#13;
-        padding-right: 15px;&#13;
-      }&#13;
-&#13;
-      div#headerMenu {&#13;
-&#13;
-        .navbar-nav {&#13;
-          margin: 0;&#13;
-        }&#13;
-&#13;
-        background-color: $left-menu-bg-color;&#13;
-&#13;
-        li {&#13;
-          text-transform: uppercase;&#13;
-&#13;
-          a {&#13;
-            color: $left-menu-text-color;&#13;
-            flex: 1;&#13;
-            display: flex;&#13;
-            align-items: center;&#13;
-            justify-content: space-between;&#13;
-            padding: 0 20px 0 20px;&#13;
-            min-height: 40px;&#13;
-&#13;
-            &amp;.child-item {&#13;
-              text-transform: none;&#13;
-              padding-left: 30px;&#13;
-              color: $left-menu-grey;&#13;
-            }&#13;
-&#13;
-            &amp;:hover, &amp;:focus {&#13;
-              color: $left-menu-text-color;&#13;
-              background-color: $left-menu-hover-color;&#13;
-            }&#13;
-          }&#13;
-        }&#13;
-      }&#13;
-    }&#13;
-&#13;
-    #utilityMenu {&#13;
-      &gt; ul &gt; li.navbar-action-icon {&#13;
-        display: none;&#13;
-      }&#13;
-&#13;
-      #userOptionsDropdown {&#13;
-        display: none;&#13;
-      }&#13;
-    }&#13;
-  }&#13;
-}&#13;
-&#13;
-&#13;
-.companyLogoContainer {&#13;
-&#13;
-  background-color: $navbar-inverse-bg;&#13;
-  padding: $logo-height;&#13;
-&#13;
-  .companyLogo img {&#13;
-    height: $logo-height;&#13;
-    vertical-align: middle;&#13;
-  }&#13;
-&#13;
-  @media (min-width: 991px) {&#13;
-    border-right: 1px solid #ddd;&#13;
-    text-align: center;&#13;
-  }&#13;
-}&#13;
-&#13;
-.leftContainer {&#13;
-&#13;
-  @media (min-width: 992px) {&#13;
-    position: fixed;&#13;
-    top: 0px;&#13;
-    left: 0px;&#13;
-    bottom: 0px;&#13;
-    z-index: 1000;&#13;
-    width: 270px;&#13;
-    color: $left-menu-text-color;&#13;
-  }&#13;
-  &#13;
-  .userInfoContainer {&#13;
-&#13;
-    @media (max-width: 991px) {&#13;
-      display: none;&#13;
-    }&#13;
-    &#13;
-    $uicHeight : 200px;&#13;
-    min-height: $uicHeight;&#13;
-    text-align: center;&#13;
-    background-color: $left-menu-bg-color;&#13;
-&#13;
-    &gt; div {&#13;
-      vertical-align:middle;&#13;
-      line-height: normal;&#13;
-    }&#13;
-    &#13;
-    span {&#13;
-      display:block;&#13;
-      padding-top: 20px;&#13;
-    }&#13;
-    &#13;
-    .userName {&#13;
-      display: block;&#13;
-      padding: 35px 10px 0;&#13;
-      font-size: 1.3em;&#13;
-      text-transform: uppercase;&#13;
-    }&#13;
-    &#13;
-    .userCompany {&#13;
-      color: $left-menu-grey;&#13;
-    }&#13;
-  }&#13;
-&#13;
-  #menuItems {&#13;
-&#13;
-    @media (min-width: 992px) {&#13;
-&#13;
-      background-color: $left-menu-bg-color;&#13;
-      height: calc(100vh - 275px); /* $uicHeight &amp; header height */&#13;
-      overflow: hidden;&#13;
-&#13;
-      &amp;:hover {&#13;
-        overflow-y: auto;&#13;
-      }&#13;
-    }&#13;
-&#13;
-    #sidebar {&#13;
-      width: 100%;&#13;
-      &#13;
-      ul:last-of-type {&#13;
-        border-bottom: 1px solid $left-menu-grey;&#13;
-      }&#13;
-            &#13;
-      &#13;
-      @media (min-width: 992px) {&#13;
-        li {&#13;
-          &#13;
-          min-height: 50px;&#13;
-          display: flex;&#13;
-          &#13;
-          &amp;.parent-item, &amp;.single-item {&#13;
-            border-top: 1px solid $left-menu-grey;&#13;
-            text-transform: uppercase;&#13;
-          }&#13;
-          &#13;
-          &amp;.parent-item {&#13;
-            &#13;
-          }&#13;
-                    &#13;
-          &gt; a {&#13;
-            color: $left-menu-text-color;&#13;
-            flex: 1;&#13;
-            display: flex;&#13;
-            align-items: center;&#13;
-            justify-content: space-between;&#13;
-            padding: 0 $left-menu-base-padding 0 $left-menu-base-padding;&#13;
-                        &#13;
-            &amp;.child-item {&#13;
-              padding-left: $left-menu-base-padding + 10px;&#13;
-              color: $left-menu-grey;&#13;
-            }&#13;
-            &#13;
-            &amp;:hover, &amp;:focus {&#13;
-              color: $left-menu-text-color;&#13;
-              background-color: $left-menu-hover-color;&#13;
-            }&#13;
-          }&#13;
-        }&#13;
-      }&#13;
-    }&#13;
-  }&#13;
-}&#13;
-&#13;
-&#13;
-&#13;
-.navbar-action-search {&#13;
-  display: table;&#13;
-&#13;
-  .input-group {&#13;
-    padding-bottom: 0px;&#13;
-&#13;
-    input[name="q"] {&#13;
-      width: 270px;&#13;
-      border-color: $text-muted;&#13;
-      border-radius: 3px;&#13;
-      float: right;&#13;
-      color: $text-muted;&#13;
-    }&#13;
-&#13;
-    ul.dropdown-menu {&#13;
-      min-width: 110%;&#13;
-&#13;
-      a.ta-item {&#13;
-        line-height: 20px;&#13;
-        font-size: 14px;&#13;
-        white-space: normal;&#13;
-&#13;
-        i.ta-icon, span {&#13;
-          display: table-cell;&#13;
-        }&#13;
-&#13;
-        span {&#13;
-          vertical-align: top;&#13;
-        }&#13;
-      }&#13;
-    }&#13;
-&#13;
-    span.input-group-btn {&#13;
-      float: left;&#13;
-&#13;
-      button {&#13;
-        background-color: inherit;&#13;
-        border: none;&#13;
-        color: inherit;&#13;
-        outline: none;&#13;
-        margin-right: 10px;&#13;
-        padding-top: 8px;&#13;
-      }      	      &#13;
-    }      &#13;
-  }&#13;
+        <css>$logo-height: 25px;
+$navbar-height: $logo-height * 3;
+
+// Left Nav
+$left-menu-bg-color: #444;
+$left-menu-hover-color: #000;
+$left-menu-border-color: #D3D3D3;
+$left-menu-border: 1px solid $left-menu-border-color;
+$left-menu-text-color: #FFF;
+$left-menu-grey: #AAAAAA;
+$left-menu-base-padding: 20px;
+
+.navbarDiv {
+  background-color: $navbar-inverse-bg;
+  border-bottom: $left-menu-border;
+}
+
+.navbar-nav {
+  
+  float: none !important;
+  
+  &gt; li {
+    float: none; 
+  }
+}
+
+.topNavbar {
+  padding: 0;
+  margin: 0 0 0 $left-menu-width;
+  border: none;
+  border-radius: 0;
+  z-index: 999;
+  background-color: $navbar-inverse-bg;
+
+  
+  .menuToggleButton {
+    background-color: $primary;
+    border-color: $success;
+    color: $navbar-inverse-bg;
+  }
+
+  @media (min-width: 992px) {
+
+    &gt; .container-fluid {
+
+      padding-right: 0px;
+      display: inline-flex;
+      width: 100%;
+      vertical-align: top;
+      height: $navbar-height;
+
+      .navbar-header {
+        display: inline-flex;
+        align-items: stretch;
+      }
+    }
+
+    &gt; .container-fluid div#headerMenu {
+
+      padding-right: 0px;
+      display: inline-flex !important;
+      justify-content: space-between;
+      flex-grow: 1;
+      background-color: $navbar-inverse-bg;
+
+      ul.navbar-nav {
+        display: inline-flex;
+        align-items: stretch;
+        flex: 1;
+        
+        li {
+          display: flex;
+          border-bottom: 3px solid transparent;
+          
+          &amp;:hover {
+            border-bottom: 3px solid $navbar-inverse-link-hover-color;
+          }
+          
+          a {
+           	display: flex;
+            align-items: center;
+          }
+        }
+      }
+      
+      #utilityMenu {
+
+        display: flex;
+
+        &gt; ul {
+          
+          li {
+            
+            &amp;.navbar-action-icon {
+              align-items: center;
+            }
+            
+            &amp;:hover {
+              border-bottom: 3px solid transparent;
+            }
+          }
+          
+          @media (max-width: 991px) {
+            #userOptionsDropdown {
+              display: none;
+            }
+          }
+
+          @media (min-width: 992px) {
+            .mobile-option {
+              display: none;
+
+              &gt; a {
+                padding-top: unset;
+              }
+            }  
+          }
+        }
+      }
+    }
+  }
+  
+  
+  @media (max-width: 991px) {
+
+    margin: 0;
+    min-height: 0;
+    
+    .collapse.in {
+      display: block !important;
+    }
+
+    &gt; .container-fluid {
+
+      .navbar-header {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      div#headerMenu {
+
+        .navbar-nav {
+          margin: 0;
+        }
+
+        background-color: $left-menu-bg-color;
+
+        li {
+          text-transform: uppercase;
+
+          a {
+            color: $left-menu-text-color;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px 0 20px;
+            min-height: 40px;
+
+            &amp;.child-item {
+              text-transform: none;
+              padding-left: 30px;
+              color: $left-menu-grey;
+            }
+
+            &amp;:hover, &amp;:focus {
+              color: $left-menu-text-color;
+              background-color: $left-menu-hover-color;
+            }
+          }
+        }
+      }
+    }
+
+    #utilityMenu {
+      &gt; ul &gt; li.navbar-action-icon {
+        display: none;
+      }
+
+      #userOptionsDropdown {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.companyLogoContainer {
+
+  background-color: $navbar-inverse-bg;
+  padding: $logo-height;
+
+  .companyLogo img {
+    height: $logo-height;
+    vertical-align: middle;
+  }
+
+  @media (min-width: 991px) {
+    border-right: 1px solid #ddd;
+    text-align: center;
+  }
+}
+
+.leftContainer {
+
+  @media (min-width: 992px) {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1000;
+    width: 270px;
+    color: $left-menu-text-color;
+  }
+  
+  .userInfoContainer {
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+    
+    $uicHeight : 200px;
+    min-height: $uicHeight;
+    text-align: center;
+    background-color: $left-menu-bg-color;
+
+    &gt; div {
+      vertical-align:middle;
+      line-height: normal;
+    }
+    
+    span {
+      display:block;
+      padding-top: 20px;
+    }
+    
+    .userName {
+      display: block;
+      padding: 35px 10px 0;
+      font-size: 1.3em;
+      text-transform: uppercase;
+    }
+    
+    .userCompany {
+      color: $left-menu-grey;
+    }
+  }
+
+  #menuItems {
+
+    @media (min-width: 992px) {
+
+      background-color: $left-menu-bg-color;
+      height: calc(100vh - 275px); /* $uicHeight &amp; header height */
+      overflow: hidden;
+
+      &amp;:hover {
+        overflow-y: auto;
+      }
+    }
+
+    #sidebar {
+      width: 100%;
+      
+      ul:last-of-type {
+        border-bottom: 1px solid $left-menu-grey;
+      }
+            
+      
+      @media (min-width: 992px) {
+        li {
+          
+          min-height: 50px;
+          display: flex;
+          
+          &amp;.parent-item, &amp;.single-item {
+            border-top: 1px solid $left-menu-grey;
+            text-transform: uppercase;
+          }
+          
+          &amp;.parent-item {
+            
+          }
+                    
+          &gt; a {
+            color: $left-menu-text-color;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 $left-menu-base-padding 0 $left-menu-base-padding;
+                        
+            &amp;.child-item {
+              padding-left: $left-menu-base-padding + 10px;
+              color: $left-menu-grey;
+            }
+            
+            &amp;:hover, &amp;:focus {
+              color: $left-menu-text-color;
+              background-color: $left-menu-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.navbar-action-search {
+  display: table;
+
+  .input-group {
+    padding-bottom: 0px;
+
+    input[name="q"] {
+      width: 270px;
+      border-color: $text-muted;
+      border-radius: 3px;
+      float: right;
+      color: $text-muted;
+    }
+
+    ul.dropdown-menu {
+      min-width: 110%;
+
+      a.ta-item {
+        line-height: 20px;
+        font-size: 14px;
+        white-space: normal;
+
+        i.ta-icon, span {
+          display: table-cell;
+        }
+
+        span {
+          vertical-align: top;
+        }
+      }
+    }
+
+    span.input-group-btn {
+      float: left;
+
+      button {
+        background-color: inherit;
+        border: none;
+        color: inherit;
+        outline: none;
+        margin-right: 10px;
+        padding-top: 8px;
+      }      	      
+    }      
+  }
+}
+
+
+
+
+
+@media (max-width: 991px) {
+
+  .navbar-header {
+    float: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -470,14 +492,14 @@ data.typeahead = $sp.getWidget('typeahead-search', data.optionsSearch);]]></scri
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-27 00:38:23</sys_created_on>
         <sys_id>3fa52561dbfc23004e9a9235ca961928</sys_id>
-        <sys_mod_count>241</sys_mod_count>
+        <sys_mod_count>250</sys_mod_count>
         <sys_name>Dell Header With Left Nav</sys_name>
         <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
         <sys_policy/>
         <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
         <sys_update_name>sp_header_footer_3fa52561dbfc23004e9a9235ca961928</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-02 02:59:15</sys_updated_on>
+        <sys_updated_on>2018-10-02 03:25:58</sys_updated_on>
         <template><![CDATA[<div class="navbarDiv">
   <nav class="navbar topNavbar" role="navigation">
     <div class="container-fluid">
