@@ -2,7 +2,7 @@
 <record_update table="sp_ng_template">
     <sp_ng_template action="INSERT_OR_UPDATE">
         <id>dellLeftNavMenuTemplate</id>
-        <sp_widget display_value="Dell HI Header">3fa52561dbfc23004e9a9235ca961928</sp_widget>
+        <sp_widget display_value="Dell Header With Left Nav">3fa52561dbfc23004e9a9235ca961928</sp_widget>
         <sys_class_name>sp_ng_template</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-25 15:32:48</sys_created_on>

@@ -33,7 +33,7 @@
         <sys_update_name>sp_portal_3555e1b4db3023004e9a9235ca961964</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2018-09-30 18:04:09</sys_updated_on>
-        <theme display_value="Dell HI Theme">9455ededdbbc23004e9a9235ca961926</theme>
+        <theme display_value="Dell Theme">9455ededdbbc23004e9a9235ca961926</theme>
         <title>Dell Managed Services</title>
         <url_suffix>msp</url_suffix>
     </sp_portal>

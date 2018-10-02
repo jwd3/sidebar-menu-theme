@@ -32,43 +32,26 @@ $left-menu-width: 250px;&#13;
 &#13;
 @media (min-width: 992px) {&#13;
 &#13;
-/*&#13;
-  .container {&#13;
-	  padding-top: 20px !important;&#13;
-	  padding-right: 40px !important;&#13;
-	  padding-left: 310px !important;&#13;
-	  bottom: 0px;&#13;
-  }&#13;
-*/&#13;
-  &#13;
   main &gt; div &gt; div.container {&#13;
   	padding-left: $left-menu-width;&#13;
   }&#13;
-}&#13;
-&#13;
-/*&#13;
-@media (max-width: 991px) {&#13;
-  .container {&#13;
-	  padding-top: 20px !important;&#13;
-  }&#13;
-}&#13;
-*/</css_variables>
+}</css_variables>
         <footer/>
         <footer_fixed>false</footer_fixed>
-        <header display_value="Dell HI Header">3fa52561dbfc23004e9a9235ca961928</header>
-        <name>Dell HI Theme</name>
+        <header display_value="Dell Header With Left Nav">3fa52561dbfc23004e9a9235ca961928</header>
+        <name>Dell Theme</name>
         <navbar_fixed>false</navbar_fixed>
         <sys_class_name>sp_theme</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-27 00:36:47</sys_created_on>
         <sys_id>9455ededdbbc23004e9a9235ca961926</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_name>Dell HI Theme</sys_name>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Dell Theme</sys_name>
         <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
         <sys_policy/>
         <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
         <sys_update_name>sp_theme_9455ededdbbc23004e9a9235ca961926</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-01 04:39:19</sys_updated_on>
+        <sys_updated_on>2018-10-02 02:58:17</sys_updated_on>
     </sp_theme>
 </record_update>
