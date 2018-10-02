@@ -13,7 +13,7 @@
         <kb_article/>
         <kb_category/>
         <kb_topic/>
-        <label>Scheduled</label>
+        <label>Resolved</label>
         <order>100</order>
         <record_script/>
         <sc_cat_item/>
@@ -24,20 +24,20 @@
         <sp_rectangle_menu_item display_value="Changes">bb113c7adbf063004e9a9235ca9619ef</sp_rectangle_menu_item>
         <sys_class_name>sp_rectangle_menu_item</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-09-30 18:01:32</sys_created_on>
-        <sys_id>e22170badbf063004e9a9235ca961956</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Scheduled</sys_name>
+        <sys_created_on>2018-10-02 04:02:27</sys_created_on>
+        <sys_id>4854009bdb34a3004e9a9235ca961981</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Resolved</sys_name>
         <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
         <sys_policy/>
         <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
-        <sys_update_name>sp_rectangle_menu_item_e22170badbf063004e9a9235ca961956</sys_update_name>
+        <sys_update_name>sp_rectangle_menu_item_4854009bdb34a3004e9a9235ca961981</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-02 04:02:18</sys_updated_on>
+        <sys_updated_on>2018-10-02 04:02:27</sys_updated_on>
         <table/>
         <type>url</type>
         <url>?id=list&amp;table=change_request</url>
         <url_target/>
     </sp_rectangle_menu_item>
-    <sys_translated_text action="delete_multiple" query="documentkey=e22170badbf063004e9a9235ca961956"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=4854009bdb34a3004e9a9235ca961981"/>
 </record_update>
