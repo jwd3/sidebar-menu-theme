@@ -8,7 +8,7 @@
 		$scope.isViewNative = true;
 
 	
-	$scope.showTypeaheadSearch = true;
+	$scope.showTypeaheadSearch = false;
 	
 	$scope.openChatPopUp = function(evt) {
 		$(evt.target).blur();
@@ -172,16 +172,59 @@ $left-menu-base-padding: 20px;
   
   
   @media (max-width: 991px) {
-   
-    #utilityMenu {
-      &gt; ul &gt; li.navbar-action-icon {
-      	display: none;
-      }
+
       
-      #userOptionsDropdown {
-        display: none;
+      &gt; .container-fluid {
+
+        .navbar-header {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        div#headerMenu {
+          
+          .navbar-nav {
+            margin: 0;
+          }
+          
+          background-color: $left-menu-bg-color;
+
+          li {
+            text-transform: uppercase;
+
+            a {
+              color: $left-menu-text-color;
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0 20px 0 20px;
+              min-height: 40px;
+              
+              &amp;.child-item {
+                text-transform: none;
+                padding-left: 30px;
+                color: $left-menu-grey;
+              }
+
+              &amp;:hover, &amp;:focus {
+                color: $left-menu-text-color;
+                background-color: $left-menu-hover-color;
+              }
+            }
+          }
+        }
       }
-    }
+
+      #utilityMenu {
+        &gt; ul &gt; li.navbar-action-icon {
+          display: none;
+        }
+
+        #userOptionsDropdown {
+          display: none;
+        }
+      }
   }
 }
 
@@ -204,7 +247,7 @@ $left-menu-base-padding: 20px;
 
 .leftContainer {
 
-  @media (min-width: 991px) {
+  @media (min-width: 992px) {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -1339,14 +1382,14 @@ data.typeahead = $sp.getWidget('typeahead-search', data.optionsSearch);]]></scri
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-09-27 00:38:23</sys_created_on>
         <sys_id>3fa52561dbfc23004e9a9235ca961928</sys_id>
-        <sys_mod_count>212</sys_mod_count>
+        <sys_mod_count>226</sys_mod_count>
         <sys_name>Dell HI Header</sys_name>
         <sys_package display_value="Dell Portal" source="x_75086_dell_porta">c4942930db3023004e9a9235ca961992</sys_package>
         <sys_policy/>
         <sys_scope display_value="Dell Portal">c4942930db3023004e9a9235ca961992</sys_scope>
         <sys_update_name>sp_header_footer_3fa52561dbfc23004e9a9235ca961928</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-01 19:39:15</sys_updated_on>
+        <sys_updated_on>2018-10-02 02:25:17</sys_updated_on>
         <template><![CDATA[<div class="navbarDiv">
   <nav class="navbar topNavbar" role="navigation">
     <div class="container-fluid">
